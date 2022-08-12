@@ -1,1 +1,1 @@
-# git-sync-harness
+# git-sync-harness-project
