@@ -1,0 +1,22 @@
+connector:
+  name: git-test-connector
+  identifier: gittestconnector
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: GitSyncFardeen
+  type: Github
+  spec:
+    url: https://github.com/Eric761/git-sync-harness
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Eric761
+          tokenRef: gitsecret
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: gitsecret
+    executeOnDelegate: false
+    type: Repo
