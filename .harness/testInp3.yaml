@@ -1,0 +1,20 @@
+inputSet:
+  identifier: "testInp3"
+  name: "testInp3"
+  orgIdentifier: "default"
+  projectIdentifier: "Fardeen_gitx"
+  pipeline:
+    identifier: "gitsyncpip1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://b.m"
+                  requestBody: "req-body"
