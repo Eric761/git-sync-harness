@@ -17,5 +17,3 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://b.m"
-                  requestBody: "erg"
-                timeout: "10m"
