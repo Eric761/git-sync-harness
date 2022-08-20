@@ -1,6 +1,7 @@
 inputSet:
   identifier: "inp2"
   name: "inp2"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "test_eric"
   pipeline:
@@ -16,5 +17,5 @@ inputSet:
                 identifier: "stp1"
                 type: "Http"
                 spec:
-                  url: "https://b.m"
+                  url: "https://b.mdc"
                   requestBody: "fefe"
