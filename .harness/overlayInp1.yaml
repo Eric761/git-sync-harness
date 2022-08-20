@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: overlayInp1
+  identifier: overlayInp1
+  orgIdentifier: default
+  projectIdentifier: test_eric
+  pipelineIdentifier: pip1
+  inputSetReferences:
+    - inp1
+    - inp2
+  tags: {}
