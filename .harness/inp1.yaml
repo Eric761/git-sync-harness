@@ -18,3 +18,5 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://b.mkn"
+                  requestBody: "gttgr"
+                timeout: "10m"
