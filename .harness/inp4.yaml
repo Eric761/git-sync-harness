@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "inp4"
+  name: "inp4"
+  orgIdentifier: "default"
+  projectIdentifier: "test_eric"
+  pipeline:
+    identifier: "pip1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://b.m"
+                  requestBody: "gtb"
+                timeout: "10m"
