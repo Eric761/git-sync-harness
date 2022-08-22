@@ -22,6 +22,6 @@ pipeline:
                     method: GET
                     headers: []
                     outputVariables: []
-                    requestBody: <+input>
+                    requestBody: hjvvv
                   timeout: 10m
         tags: {}
