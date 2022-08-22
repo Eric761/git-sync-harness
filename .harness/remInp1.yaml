@@ -1,6 +1,7 @@
 inputSet:
   identifier: "remInp1"
   name: "remInp1"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "test_eric"
   pipeline:
@@ -18,4 +19,4 @@ inputSet:
                 spec:
                   url: "https://b.m"
                   requestBody: "regarg"
-                timeout: "10m"
+                timeout: "9m"
