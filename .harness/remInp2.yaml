@@ -1,0 +1,20 @@
+inputSet:
+  identifier: "remInp2"
+  name: "remInp2"
+  orgIdentifier: "default"
+  projectIdentifier: "test_eric"
+  pipeline:
+    identifier: "gitsyncpip1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://b.m"
+                timeout: "10m"
