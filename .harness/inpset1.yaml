@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "inpset1"
+  name: "inpset1"
+  orgIdentifier: "default"
+  projectIdentifier: "Fardeen_gitx"
+  pipeline:
+    identifier: "gitsyncpip1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://m.n"
+                  requestBody: "hgcg"
+                timeout: "10m"
