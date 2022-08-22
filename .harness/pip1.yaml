@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: stg1
         identifier: stg1
-        description: ""
+        description: hgv
         type: Custom
         spec:
           execution:
