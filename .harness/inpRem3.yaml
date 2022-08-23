@@ -17,3 +17,4 @@ inputSet:
                 type: "Http"
                 spec:
                   requestBody: "erwfr"
+                  url: "https://b.m"
