@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "inpRem4"
+  name: "inpRem4"
+  orgIdentifier: "default"
+  projectIdentifier: "testEricGitSync"
+  pipeline:
+    identifier: "gitSyncRemP1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://c.mob"
+                  method: "GET"
+                  requestBody: "refb"
+                timeout: "2m"
