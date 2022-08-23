@@ -21,7 +21,7 @@ pipeline:
                     url: <+input>
                     headers: []
                     outputVariables: []
-                    method: GET
-                    requestBody: bgrft
-                  timeout: 1m
+                    method: <+input>
+                    requestBody: <+input>
+                  timeout: <+input>
         tags: {}
