@@ -17,4 +17,3 @@ inputSet:
                 type: "Http"
                 spec:
                   requestBody: "erwfr"
-                timeout: "3m"
