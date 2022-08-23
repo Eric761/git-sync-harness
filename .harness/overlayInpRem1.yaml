@@ -1,0 +1,12 @@
+overlayInputSet:
+  name: overlayInpRem1
+  identifier: overlayInpRem1
+  orgIdentifier: default
+  projectIdentifier: testEricGitSync
+  pipelineIdentifier: gitSyncRemP1
+  inputSetReferences:
+    - inpRem2
+    - inpRem3
+    - inpRem4
+    - inpRem1
+  tags: {}
