@@ -7,5 +7,3 @@ overlayInputSet:
   pipelineIdentifier: gitSyncRemP1
   inputSetReferences:
     - inpRem2
-    - inpRem3
-    - inpRem4
