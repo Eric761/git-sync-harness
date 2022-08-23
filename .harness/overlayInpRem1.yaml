@@ -6,6 +6,6 @@ overlayInputSet:
   projectIdentifier: testEricGitSync
   pipelineIdentifier: gitSyncRemP1
   inputSetReferences:
-    - inpRem4
-    - inpRem3
     - inpRem2
+    - inpRem3
+    - inpRem4
