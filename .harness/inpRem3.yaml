@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "inpRem3"
+  name: "inpRem3"
+  orgIdentifier: "default"
+  projectIdentifier: "testEricGitSync"
+  pipeline:
+    identifier: "gitSyncRemP1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  method: "GET"
+                  requestBody: "erwfr"
+                timeout: "3m"
