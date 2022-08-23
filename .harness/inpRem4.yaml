@@ -19,5 +19,4 @@ inputSet:
                 spec:
                   url: "https://c.mob"
                   method: "GET"
-                  requestBody: "rshsrt"
                 timeout: "10m"
