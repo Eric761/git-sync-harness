@@ -1,6 +1,7 @@
 inputSet:
   identifier: "inpR1"
   name: "inpR1"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Fardeen_gitx"
   pipeline:
