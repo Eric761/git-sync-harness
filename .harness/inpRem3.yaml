@@ -16,6 +16,5 @@ inputSet:
                 identifier: "stp1"
                 type: "Http"
                 spec:
-                  method: "GET"
                   requestBody: "erwfr"
                 timeout: "3m"
