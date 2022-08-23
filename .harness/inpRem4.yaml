@@ -17,6 +17,5 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://c.mob"
-                  method: "GET"
                   requestBody: "refb"
                 timeout: "2m"
