@@ -22,6 +22,6 @@ pipeline:
                     method: <+input>
                     headers: []
                     outputVariables: []
-                    requestBody: <+input>
+                    requestBody: wefr
                   timeout: 1m
         tags: {}
