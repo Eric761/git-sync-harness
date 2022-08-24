@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "inpSR1"
+  name: "inpSR1"
+  orgIdentifier: "default"
+  projectIdentifier: "Eric_Git_Sync"
+  pipeline:
+    identifier: "pipR1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://b.m"
+                  method: "GET"
+                  requestBody: "eagr"
+                timeout: "10m"
