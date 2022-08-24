@@ -5,8 +5,5 @@ overlayInputSet:
   projectIdentifier: Eric_Git_Sync
   pipelineIdentifier: pipR1
   inputSetReferences:
-    - inpSR1
-    - inpSR3
     - inpSR4
-    - inpSR2
   tags: {}
