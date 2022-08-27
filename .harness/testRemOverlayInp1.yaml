@@ -5,6 +5,5 @@ overlayInputSet:
   projectIdentifier: Eric
   pipelineIdentifier: testRemPip
   inputSetReferences:
-    - testRemInp1
     - testRemInp2
   tags: {}
