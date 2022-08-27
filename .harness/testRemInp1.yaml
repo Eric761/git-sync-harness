@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "testRemInp1"
+  name: "testRemInp1"
+  orgIdentifier: "default"
+  projectIdentifier: "Eric"
+  pipeline:
+    identifier: "testRemPip"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://test.com"
+                  method: "GET"
+                  requestBody: "req"
+                timeout: "10m"
