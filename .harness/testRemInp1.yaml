@@ -18,6 +18,5 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://test.com"
-                  requestBody: "jb"
                   method: "POST"
                 timeout: "10m"
