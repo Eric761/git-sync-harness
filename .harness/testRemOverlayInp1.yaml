@@ -7,5 +7,4 @@ overlayInputSet:
   pipelineIdentifier: testRemPip
   inputSetReferences:
     - testRemInp2
-    - testRemInp1
     - testRemInp3
