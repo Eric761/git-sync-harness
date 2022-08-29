@@ -8,3 +8,4 @@ overlayInputSet:
   inputSetReferences:
     - testRemInp2
     - testRemInp1
+    - testRemInp3
