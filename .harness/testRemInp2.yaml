@@ -18,6 +18,5 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://test2.com"
-                  requestBody: "nhjhb"
                   method: "POST"
                 timeout: "10m"
