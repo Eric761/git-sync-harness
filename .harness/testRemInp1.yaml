@@ -1,6 +1,7 @@
 inputSet:
   identifier: "testRemInp1"
   name: "testRemInp1"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Eric"
   pipeline:
@@ -17,4 +18,6 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://test.com"
+                  requestBody: "jb"
+                  method: "POST"
                 timeout: "10m"
