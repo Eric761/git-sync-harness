@@ -1,0 +1,11 @@
+overlayInputSet:
+  name: dummy
+  identifier: dummy
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipelineIdentifier: testRemPip
+  inputSetReferences:
+    - testRemInp2
+    - testRemInp3
+    - testRemInp1
+  tags: {}
