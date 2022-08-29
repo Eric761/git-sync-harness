@@ -19,4 +19,3 @@ inputSet:
                 spec:
                   url: "https://test.com"
                   method: "POST"
-                timeout: "10m"
