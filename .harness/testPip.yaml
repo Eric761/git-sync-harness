@@ -21,7 +21,7 @@ pipeline:
                     url: <+input>
                     headers: []
                     outputVariables: []
-                    requestBody: req
-                    method: GET
+                    requestBody: <+input>
+                    method: <+input>
                   timeout: <+input>
         tags: {}
