@@ -25,3 +25,13 @@ pipeline:
                     requestBody: <+input>
                   timeout: 10m
         tags: {}
+  variables:
+    - name: var1
+      type: String
+      value: <+input>
+    - name: var2
+      type: String
+      value: <+input>
+    - name: var3
+      type: String
+      value: <+input>
