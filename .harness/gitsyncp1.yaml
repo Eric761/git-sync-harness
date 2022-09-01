@@ -25,3 +25,5 @@ pipeline:
                     requestBody: <+input>
                   timeout: 10m
         tags: {}
+        variables: []
+  variables: []
