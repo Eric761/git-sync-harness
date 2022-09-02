@@ -26,4 +26,13 @@ pipeline:
                   timeout: 10m
         tags: {}
         variables: []
-  variables: []
+  variables:
+    - name: v1
+      type: String
+      value: <+input>.allowedValues(67)
+    - name: v2
+      type: String
+      value: <+input>.allowedValues(45)
+    - name: v3
+      type: String
+      value: <+input>
