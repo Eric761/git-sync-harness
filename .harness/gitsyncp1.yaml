@@ -28,10 +28,10 @@ pipeline:
   variables:
     - name: var1
       type: String
-      value: <+input>
+      value: <+input>.allowedValues(22)
     - name: var2
       type: String
-      value: <+input>
+      value: <+input>.allowedValues(11)
     - name: var3
       type: String
       value: <+input>
