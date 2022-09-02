@@ -35,3 +35,6 @@ pipeline:
     - name: var3
       type: String
       value: <+input>
+    - name: Namespace
+      type: String
+      value: <+input>
