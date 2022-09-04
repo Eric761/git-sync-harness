@@ -19,4 +19,3 @@ inputSet:
                 spec:
                   url: "https://b.m"
                   requestBody: "jviuvj"
-                timeout: "10m"
