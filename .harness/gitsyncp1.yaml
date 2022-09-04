@@ -22,7 +22,7 @@ pipeline:
                     method: GET
                     headers: []
                     outputVariables: []
-                    requestBody: <+input>
+                    requestBody: rwq-body
                   timeout: <+input>
         tags: {}
         variables: []
