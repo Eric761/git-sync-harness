@@ -1,0 +1,30 @@
+inputSet:
+  identifier: "inpR3"
+  name: "inpR3"
+  orgIdentifier: "default"
+  projectIdentifier: "Fardeen_gitx"
+  pipeline:
+    identifier: "gitsyncp1"
+    stages:
+    - stage:
+        identifier: "stg1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://google.com"
+                  requestBody: "request-body"
+    variables:
+    - name: "v1"
+      type: "String"
+      value: "67"
+    - name: "v2"
+      type: "String"
+      value: "45"
+    - name: "v3"
+      type: "String"
+      value: "12"
