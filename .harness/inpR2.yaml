@@ -1,6 +1,7 @@
 inputSet:
   identifier: "inpR2"
   name: "inpR2"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Fardeen_gitx"
   pipeline:
@@ -17,3 +18,5 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://b.m"
+                  requestBody: "req-body"
+                timeout: "10m"
