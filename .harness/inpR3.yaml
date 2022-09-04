@@ -1,6 +1,7 @@
 inputSet:
   identifier: "inpR3"
   name: "inpR3"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Fardeen_gitx"
   pipeline:
@@ -17,7 +18,6 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://google.com"
-                  requestBody: "request-body"
     variables:
     - name: "v1"
       type: "String"
