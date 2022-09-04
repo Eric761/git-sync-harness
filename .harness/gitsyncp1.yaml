@@ -22,7 +22,7 @@ pipeline:
                     method: GET
                     headers: []
                     outputVariables: []
-                    requestBody: <+input>
+                    requestBody: req-body
                   timeout: 10m
         tags: {}
         variables: []
