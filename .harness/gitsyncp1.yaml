@@ -23,7 +23,7 @@ pipeline:
                     headers: []
                     outputVariables: []
                     requestBody: rwq-body
-                  timeout: <+input>
+                  timeout: 10m
         tags: {}
         variables: []
   variables:
