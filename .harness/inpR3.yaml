@@ -18,7 +18,6 @@ inputSet:
                 type: "Http"
                 spec:
                   url: "https://google.com"
-                timeout: "10m"
     variables:
     - name: "v1"
       type: "String"
