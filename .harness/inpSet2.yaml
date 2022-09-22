@@ -18,4 +18,3 @@ inputSet:
                 spec:
                   url: "https://b.m"
                   requestBody: "req"
-                timeout: "2m"
