@@ -1,9 +1,0 @@
-overlayInputSet:
-  name: overlayInpSR1
-  identifier: overlayInpSR1
-  orgIdentifier: default
-  projectIdentifier: Eric_Git_Sync
-  pipelineIdentifier: pipR1
-  inputSetReferences:
-    - inpSR4
-  tags: {}

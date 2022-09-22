@@ -1,9 +1,0 @@
-overlayInputSet:
-  name: testRemOverlayInp2
-  tags: {}
-  identifier: testRemOverlayInp2
-  orgIdentifier: default
-  projectIdentifier: Eric
-  pipelineIdentifier: testRemPip
-  inputSetReferences:
-    - testRemInp3
