@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "inpSet2"
+  name: "inpSet2"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip1"
+    stages:
+    - stage:
+        identifier: "testStage1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "stp1"
+                type: "Http"
+                spec:
+                  url: "https://b.m"
+                  requestBody: "req"
+                timeout: "2m"
