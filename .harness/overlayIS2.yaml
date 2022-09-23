@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: overlayIS2
+  identifier: overlayIS2
+  orgIdentifier: default
+  projectIdentifier: naidusanity
+  pipelineIdentifier: demoRemPip4OIS
+  inputSetReferences:
+    - inpSetOIS2
+    - inpSetOIS3
+  tags: {}
