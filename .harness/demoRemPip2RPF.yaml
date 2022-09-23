@@ -1,0 +1,27 @@
+pipeline:
+  name: demoRemPip2-RPF
+  identifier: demoRemPip2RPF
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Http
+                  name: step1
+                  identifier: step1
+                  spec:
+                    url: <+input>
+                    method: GET
+                    headers: []
+                    outputVariables: []
+                    requestBody: <+input>
+                  timeout: <+input>
+        tags: {}
