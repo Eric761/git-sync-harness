@@ -1,0 +1,75 @@
+pipeline:
+  name: demoRemPip3-TIF
+  identifier: demoRemPip3TIF
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Http
+                  name: step1
+                  identifier: step1
+                  spec:
+                    url: <+input>
+                    method: GET
+                    headers: []
+                    outputVariables: []
+                    requestBody: <+input>
+                  timeout: <+input>
+        tags: {}
+    - stage:
+        name: stage2
+        identifier: stage2
+        description: ""
+        type: Deployment
+        spec:
+          serviceConfig:
+            serviceRef: nginx
+            serviceDefinition:
+              spec:
+                variables: []
+              type: Kubernetes
+          infrastructure:
+            environmentRef: env9
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                connectorRef: pieplay
+                namespace: ns
+                releaseName: release-<+INFRA_KEY>
+            allowSimultaneousDeployments: false
+          execution:
+            steps:
+              - step:
+                  type: Http
+                  name: step1
+                  identifier: step1
+                  spec:
+                    url: https://github.com
+                    method: GET
+                    headers: []
+                    outputVariables: []
+                    requestBody: req
+                  timeout: <+input>
+            rollbackSteps:
+              - step:
+                  name: Rollback Rollout Deployment
+                  identifier: rollbackRolloutDeployment
+                  type: K8sRollingRollback
+                  timeout: 10m
+                  spec: {}
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
