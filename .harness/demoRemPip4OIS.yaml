@@ -25,3 +25,23 @@ pipeline:
                     requestBody: <+input>
                   timeout: <+input>
         tags: {}
+    - stage:
+        name: stage2
+        identifier: stage2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Http
+                  name: step1
+                  identifier: step1
+                  spec:
+                    url: https://google.com
+                    method: GET
+                    headers: []
+                    outputVariables: []
+                    requestBody: req
+                  timeout: <+input>
+        tags: {}
