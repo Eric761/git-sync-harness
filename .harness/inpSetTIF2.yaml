@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "inpSetTIF2"
+  name: "inpSetTIF2"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip3TIF"
+    stages:
+    - stage:
+        identifier: "stage1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                spec:
+                  url: "https://github.com"
+                  requestBody: "req"
+                timeout: "10m"
