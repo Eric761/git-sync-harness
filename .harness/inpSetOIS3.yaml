@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "inpSetOIS3"
+  name: "inpSetOIS3"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip4OIS"
+    stages:
+    - stage:
+        identifier: "stage2"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                timeout: "10m"
