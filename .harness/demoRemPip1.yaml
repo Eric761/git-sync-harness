@@ -1,5 +1,5 @@
 pipeline:
-  name: demoRemPip1
+  name: demoRemPip1-IS
   identifier: demoRemPip1
   projectIdentifier: naidusanity
   orgIdentifier: default
