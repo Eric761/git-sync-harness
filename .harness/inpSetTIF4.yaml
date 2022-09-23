@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "inpSetTIF4"
+  name: "inpSetTIF4"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip3TIF"
+    stages:
+    - stage:
+        identifier: "stage1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                timeout: "11m"
