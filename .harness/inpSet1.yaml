@@ -18,7 +18,6 @@ inputSet:
                 spec:
                   url: "https://google.com"
                   requestBody: "req"
-                timeout: "10m"
     - stage:
         identifier: "stage2"
         type: "Deployment"
