@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "inpSetRPF4"
+  name: "inpSetRPF4"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip2RPF"
+    stages:
+    - stage:
+        identifier: "stage1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                timeout: "10m"
