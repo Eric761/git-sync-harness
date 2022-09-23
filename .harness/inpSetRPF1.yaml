@@ -1,0 +1,31 @@
+inputSet:
+  identifier: "inpSetRPF1"
+  name: "inpSetRPF1"
+  orgIdentifier: "default"
+  projectIdentifier: "naidusanity"
+  pipeline:
+    identifier: "demoRemPip2RPF"
+    stages:
+    - stage:
+        identifier: "stage1"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                spec:
+                  url: "https://google.com"
+                  requestBody: "req"
+                timeout: "10m"
+    - stage:
+        identifier: "stage2"
+        type: "Deployment"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "step1"
+                type: "Http"
+                timeout: "10m"
