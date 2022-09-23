@@ -23,7 +23,7 @@ pipeline:
                     headers: []
                     outputVariables: []
                     requestBody: <+input>
-                  timeout: <+input>
+                  timeout: 1m
         tags: {}
     - stage:
         name: stage2
