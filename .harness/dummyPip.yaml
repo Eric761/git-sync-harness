@@ -11,3 +11,15 @@ pipeline:
         template:
           templateRef: dummyStg
           versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: stp2
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                      timeout: <+input>
