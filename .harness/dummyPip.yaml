@@ -1,0 +1,13 @@
+pipeline:
+  name: dummyPip
+  identifier: dummyPip
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stg1
+        identifier: stg1
+        template:
+          templateRef: dummyStg
+          versionLabel: v1
