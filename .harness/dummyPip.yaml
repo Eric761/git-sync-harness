@@ -6,20 +6,26 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: stg1
-        identifier: stg1
-        template:
-          templateRef: dummyStg
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: stp2
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          minimumCount: <+input>
-                      timeout: <+input>
+        name: fver
+        identifier: fver
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ServiceNowUpdate
+                  name: erffver
+                  identifier: erffver
+                  spec:
+                    useServiceNowTemplate: false
+                    connectorRef: <+input>
+                    ticketType: <+input>
+                    ticketNumber: <+input>
+                    fields:
+                      - name: description
+                        value: <+input>
+                      - name: short_description
+                        value: <+input>
+                  timeout: 1d
+        tags: {}
