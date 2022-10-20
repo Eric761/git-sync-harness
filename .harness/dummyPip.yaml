@@ -28,4 +28,5 @@ pipeline:
                       - name: short_description
                         value: <+input>
                   timeout: 1d
+          pipelineInputs: {}
         tags: {}
