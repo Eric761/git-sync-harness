@@ -1,0 +1,27 @@
+pipeline:
+  name: remPip
+  identifier: remPip
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stg1
+        identifier: stg1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Http
+                  name: HTTP
+                  identifier: HTTP
+                  spec:
+                    url: <+input>
+                    method: GET
+                    headers: []
+                    outputVariables: []
+                    requestBody: req
+                  timeout: <+input>
+        tags: {}
