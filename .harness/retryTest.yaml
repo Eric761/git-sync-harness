@@ -34,4 +34,4 @@ pipeline:
           - name: var1
             type: String
             description: ""
-            value: "12"
+            value: <+input>
