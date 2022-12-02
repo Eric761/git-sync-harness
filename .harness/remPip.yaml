@@ -45,3 +45,8 @@ pipeline:
                     requestBody: req
                   timeout: <+input>
         tags: {}
+        variables:
+          - name: var1
+            type: String
+            description: ""
+            value: <+input>
