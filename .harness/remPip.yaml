@@ -14,16 +14,19 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: Http
-                  name: HTTP
-                  identifier: HTTP
+                  type: ShellScript
+                  name: Shell Script
+                  identifier: ShellScript
                   spec:
-                    url: <+input>
-                    method: <+input>
-                    headers: []
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "test"
+                    environmentVariables: []
                     outputVariables: []
-                    requestBody: req
-                  timeout: <+input>
+                  timeout: 10m
         tags: {}
     - stage:
         name: stage2
@@ -34,15 +37,20 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: Http
-                  name: HTTP
-                  identifier: HTTP
+                  type: ShellScript
+                  name: Shell Script
+                  identifier: ShellScript
                   spec:
-                    url: <+input>
-                    method: GET
-                    headers: []
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          echo "test"
+                          exit 1
+                    environmentVariables: []
                     outputVariables: []
-                    requestBody: req
                   timeout: <+input>
         tags: {}
         variables:
