@@ -27,6 +27,7 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
+          outputs: []
         tags: {}
         variables:
           - name: var1
