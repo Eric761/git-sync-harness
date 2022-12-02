@@ -19,7 +19,7 @@ pipeline:
                   identifier: HTTP
                   spec:
                     url: <+input>
-                    method: GET
+                    method: <+input>
                     headers: []
                     outputVariables: []
                     requestBody: req
