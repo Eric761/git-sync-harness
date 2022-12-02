@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "inpSet"
+  name: "inpSet"
+  orgIdentifier: "default"
+  projectIdentifier: "Fardeen"
+  pipeline:
+    identifier: "remPip"
+    stages:
+    - stage:
+        identifier: "stage2"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "ShellScript"
+                type: "ShellScript"
+                timeout: "8m"
