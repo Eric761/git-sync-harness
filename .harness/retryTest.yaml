@@ -14,34 +14,19 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: Http
-                  name: HTTP
-                  identifier: HTTP
+                  type: ShellScript
+                  name: stp1
+                  identifier: stp1
                   spec:
-                    url: <+input>
-                    method: <+input>
-                    headers: []
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          echo "helo"
+                          exit 1
+                    environmentVariables: []
                     outputVariables: []
-                    requestBody: <+input>
-                  timeout: <+input>
-        tags: {}
-    - stage:
-        name: stage2
-        identifier: stage2
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: Http
-                  name: HTTP
-                  identifier: HTTP
-                  spec:
-                    url: <+input>
-                    method: GET
-                    headers: []
-                    outputVariables: []
-                    requestBody: req
                   timeout: <+input>
         tags: {}
