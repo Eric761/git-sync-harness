@@ -24,18 +24,4 @@ pipeline:
                     outputVariables: []
                     requestBody: req
                   timeout: 1m
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: exit 0
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
         tags: {}
