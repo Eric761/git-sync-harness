@@ -6,13 +6,25 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: stg
-        identifier: stg
+        name: stg1
+        identifier: stg1
         description: ""
-        type: Pipeline
+        type: Custom
         spec:
-          org: default
-          pipeline: childPipPIE9743
-          project: naidusanity
-          inputSetReferences:
-            - ino1
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
