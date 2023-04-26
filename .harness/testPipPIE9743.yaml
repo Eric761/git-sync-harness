@@ -14,31 +14,5 @@ pipeline:
           org: default
           pipeline: childPipPIE9743
           project: naidusanity
-          inputs:
-            identifier: childPipPIE9743
-            template:
-              templateInputs:
-                stages:
-                  - stage:
-                      identifier: stgTemp
-                      template:
-                        templateInputs:
-                          type: Deployment
-                          spec:
-                            services:
-                              values: <+input>
-                            environment:
-                              environmentRef: <+input>
-                              environmentInputs: <+input>
-                              serviceOverrideInputs: <+input>
-                              infrastructureDefinitions: <+input>
-                            execution:
-                              steps:
-                                - step:
-                                    identifier: ShellScript_1
-                                    type: ShellScript
-                                    spec:
-                                      source:
-                                        type: Inline
-                                        spec:
-                                          script: <+input>
+          inputSetReferences:
+            - ino1
