@@ -1,0 +1,23 @@
+inputSet:
+  name: inpPreQA
+  identifier: inpPreQA
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipeline:
+    identifier: testCDS67500PreQA
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: <+input>
+                    timeout: 12m
