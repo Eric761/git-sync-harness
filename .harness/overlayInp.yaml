@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: overlayInp
+  identifier: overlayInp
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipelineIdentifier: testPipCDS67500
+  inputSetReferences:
+    - dummyInp
+    - testInpSetCDS67500
+  tags: {}
