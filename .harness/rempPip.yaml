@@ -6,25 +6,21 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: terg
-        identifier: terg
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
+        name: tempStg
+        identifier: tempStg
+        template:
+          templateRef: stgTemp
+          versionLabel: v1
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
                       spec:
-                        script: rev
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
