@@ -56,6 +56,11 @@ pipeline:
                                     type: Inline
                                     spec:
                                       script: <+input>
+                      variables:
+                        - name: tempVar
+                          type: String
+                          value: <+input>
           outputs:
             - name: out1
-              value: <+input>
+              value: <+pipeline.stages.stg.variables.tempVar>
+        tags: {}
