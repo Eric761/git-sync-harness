@@ -28,3 +28,34 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: parStg
+        identifier: parStg
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childPipTempFqn
+          project: Fardeen
+          inputs:
+            identifier: childPipTempFqn
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: stg
+                      type: Custom
+                      spec:
+                        execution:
+                          steps:
+                            - step:
+                                identifier: ShellScript_1
+                                type: ShellScript
+                                spec:
+                                  source:
+                                    type: Inline
+                                    spec:
+                                      script: <+input>
+          outputs:
+            - name: out1
+              value: <+input>
