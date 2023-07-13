@@ -1,5 +1,6 @@
 inputSet:
   name: correctInp
+  tags: {}
   identifier: correctInp
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -19,4 +20,4 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: echo "hello"
+                          script: echo "input-set"
