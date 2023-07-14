@@ -39,3 +39,9 @@ pipeline:
             description: ""
             required: false
             value: "12_56"
+  variables:
+    - name: vaar6
+      type: String
+      description: ""
+      required: false
+      value: "123_321"
