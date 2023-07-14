@@ -28,3 +28,9 @@ pipeline:
                     outputVariables: []
                   timeout: <+input>
         tags: {}
+        variables:
+          - name: var1
+            type: String
+            description: ""
+            required: false
+            value: "123_45"
