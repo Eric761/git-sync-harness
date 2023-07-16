@@ -1,5 +1,6 @@
 inputSet:
   name: inp4
+  tags: {}
   identifier: inp4
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -15,4 +16,13 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: 1h
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo "abc"
+                    timeout: 1h 2m
+  cacheResponse:
+    cacheState: STALE_CACHE
+    ttlLeft: 238851688
+    lastUpdatedAt: 1689493265600
