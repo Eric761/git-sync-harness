@@ -20,8 +20,8 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: echo "input-set-2"
+                          script: echo "input-set-3"
   cacheResponse:
     cacheState: VALID_CACHE
-    ttlLeft: 258676850
-    lastUpdatedAt: 1689243746537
+    ttlLeft: 259033173
+    lastUpdatedAt: 1689513203693
