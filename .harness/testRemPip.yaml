@@ -29,19 +29,19 @@ pipeline:
                   timeout: <+input>
         tags: {}
         variables:
+          - name: var2
+            type: String
+            description: ""
+            required: false
+            value: "345_765"
           - name: var1
             type: String
             description: ""
             required: false
-            value: "123_45"
-          - name: var3
-            type: String
-            description: ""
-            required: false
-            value: "12_56"
+            value: "987_094"
   variables:
-    - name: vaar6
+    - name: pipVar
       type: String
       description: ""
       required: false
-      value: "123_321"
+      value: "1234_4321"
