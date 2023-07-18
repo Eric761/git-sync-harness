@@ -54,4 +54,4 @@ pipeline:
                                 type: Inline
                                 spec:
                                   script: <+input>
-                            timeout: 15m
+                            timeout: 17m
