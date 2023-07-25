@@ -1,0 +1,23 @@
+inputSet:
+  name: inp-1-br
+  identifier: inp1br
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipeline:
+    identifier: testInpSetPip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo "test-inp-1 branch"
+                    timeout: 14m
