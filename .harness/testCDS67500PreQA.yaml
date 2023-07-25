@@ -28,3 +28,9 @@ pipeline:
                     outputVariables: []
                   timeout: <+input>
         tags: {}
+        variables:
+          - name: stgVar
+            type: String
+            description: ""
+            required: true
+            value: <+input>
