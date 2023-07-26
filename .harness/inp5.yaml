@@ -1,0 +1,22 @@
+inputSet:
+  name: inp5
+  identifier: inp5
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipeline:
+    identifier: testRemPip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: <+input>.executionInput()
