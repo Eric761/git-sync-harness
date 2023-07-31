@@ -21,8 +21,7 @@ inputSet:
                         type: Inline
                         spec:
                           script: <+input>.executionInput()
-                    timeout: 13m
   cacheResponse:
     cacheState: VALID_CACHE
-    ttlLeft: 259176190
-    lastUpdatedAt: 1690793522683
+    ttlLeft: 259167573
+    lastUpdatedAt: 1690797076167
