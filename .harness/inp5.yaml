@@ -21,7 +21,6 @@ inputSet:
                         type: Inline
                         spec:
                           script: <+input>.executionInput()
-                    timeout: 14m
   cacheResponse:
     cacheState: VALID_CACHE
     ttlLeft: 259175928
