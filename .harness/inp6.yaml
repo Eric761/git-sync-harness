@@ -20,4 +20,3 @@ inputSet:
                         type: Inline
                         spec:
                           script: dummy
-                    timeout: 18m
