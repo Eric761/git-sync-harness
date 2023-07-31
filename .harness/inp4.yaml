@@ -21,7 +21,6 @@ inputSet:
                         type: Inline
                         spec:
                           script: echo "abc"
-                    timeout: 1h 2m
   cacheResponse:
     cacheState: STALE_CACHE
     ttlLeft: 238851688
