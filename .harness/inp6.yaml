@@ -1,0 +1,23 @@
+inputSet:
+  name: inp6
+  identifier: inp6
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipeline:
+    identifier: testRemPip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: dummy
+                    timeout: 18m
