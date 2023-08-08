@@ -24,5 +24,5 @@ inputSet:
                     timeout: 45s
   cacheResponse:
     cacheState: VALID_CACHE
-    ttlLeft: 86331854
-    lastUpdatedAt: 1691531680205
+    ttlLeft: 85941092
+    lastUpdatedAt: 1691531886070
