@@ -24,5 +24,5 @@ inputSet:
                     timeout: 10s
   cacheResponse:
     cacheState: STALE_CACHE
-    ttlLeft: 79882917
-    lastUpdatedAt: 1691523156206
+    ttlLeft: 83791222
+    lastUpdatedAt: 1691529687501
