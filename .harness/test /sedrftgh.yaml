@@ -1,5 +1,6 @@
 inputSet:
   name: sedrftgh
+  tags: {}
   identifier: sedrftgh
   orgIdentifier: default
   projectIdentifier: Eric
@@ -21,3 +22,7 @@ inputSet:
                         spec:
                           script: vb
                     timeout: 45s
+  cacheResponse:
+    cacheState: VALID_CACHE
+    ttlLeft: 85993432
+    lastUpdatedAt: 1691531224235
