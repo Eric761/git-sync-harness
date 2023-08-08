@@ -1,0 +1,23 @@
+inputSet:
+  name: fdsfde
+  identifier: fdsfde
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipeline:
+    identifier: featBranchPip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: cdxs
+                    timeout: 10s
