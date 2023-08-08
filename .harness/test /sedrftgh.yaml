@@ -20,9 +20,9 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: vb
+                          script: echo 'hello'
                     timeout: 45s
   cacheResponse:
     cacheState: VALID_CACHE
-    ttlLeft: 85993432
-    lastUpdatedAt: 1691531224235
+    ttlLeft: 86331854
+    lastUpdatedAt: 1691531680205
