@@ -1,0 +1,23 @@
+inputSet:
+  name: test
+  identifier: test
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipeline:
+    identifier: featBranchPip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo 'hello'
+                    timeout: 10s
