@@ -1,22 +1,7 @@
 inputSet:
-  identifier: "inp1"
-  name: "inp1"
-  orgIdentifier: "default"
-  projectIdentifier: "naidusanity"
+  identifier: inp1
+  name: inp1
+  orgIdentifier: default
+  projectIdentifier: naidusanity
   pipeline:
-    identifier: "retryTest"
-    stages:
-    - stage:
-        identifier: "stage1"
-        type: "Custom"
-        spec:
-          execution:
-            steps:
-            - step:
-                identifier: "HTTP"
-                type: "Http"
-                spec:
-                  url: "https://gg.b"
-                  method: "GET"
-                  requestBody: "req"
-                timeout: "9m"
+    identifier: retryTest
