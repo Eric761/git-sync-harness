@@ -43,14 +43,6 @@ pipeline:
           deploymentType: Kubernetes
           service:
             serviceRef: s1
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  variables:
-                    - name: var1
-                      type: String
-                      value: <+input>
           environment:
             environmentRef: envV2
             deployToAll: false
