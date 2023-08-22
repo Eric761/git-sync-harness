@@ -1,15 +1,15 @@
 inputSet:
-  identifier: "inp"
-  name: "inp"
-  orgIdentifier: "default"
-  projectIdentifier: "naidusanity"
+  identifier: inp
+  name: inp
+  orgIdentifier: default
+  projectIdentifier: naidusanity
   pipeline:
-    identifier: "retryTest2"
+    identifier: retryTest2
     stages:
-    - stage:
-        identifier: "stg1"
-        type: "Custom"
-        variables:
-        - name: "var1"
-          type: "String"
-          value: "test"
+      - stage:
+          identifier: stg1
+          type: Custom
+          variables:
+            - name: var1
+              type: String
+              value: test
