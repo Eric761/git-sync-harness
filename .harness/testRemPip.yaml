@@ -68,3 +68,4 @@ pipeline:
       description: ""
       required: false
       value: "1234_4321"
+  allowStageExecutions: true
