@@ -8,7 +8,7 @@ inputSet:
     identifier: testRemPip
     stages:
       - stage:
-          identifier: stg
+          identifier: stg2
           type: Custom
           spec:
             execution:
@@ -20,8 +20,4 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: echo "abc"
-  cacheResponse:
-    cacheState: VALID_CACHE
-    ttlLeft: 259193529
-    lastUpdatedAt: 1690797349474
+                          script: <+input>
