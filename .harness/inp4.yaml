@@ -1,6 +1,8 @@
 inputSet:
   name: inp4
-  tags: {}
+  tags:
+    d: s
+    g: h
   identifier: inp4
   orgIdentifier: default
   projectIdentifier: Fardeen
