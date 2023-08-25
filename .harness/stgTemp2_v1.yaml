@@ -1,0 +1,37 @@
+template:
+  name: stgTemp2
+  identifier: stgTemp2
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: stpTemp3
+              identifier: stpTemp3
+              template:
+                templateRef: stepTemp_CDS77739
+                versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    outputVariables:
+                      - name: outputVar1
+                        type: String
+                        value: <+input>
+    variables:
+      - name: var3
+        type: String
+        description: ""
+        required: false
+        value: <+input>
