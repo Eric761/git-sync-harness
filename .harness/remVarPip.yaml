@@ -33,4 +33,4 @@ pipeline:
             type: String
             description: ""
             required: false
-            value: 20
+            value: "20"
