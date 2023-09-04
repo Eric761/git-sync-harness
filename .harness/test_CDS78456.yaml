@@ -1,0 +1,21 @@
+pipeline:
+  name: test_CDS-78456
+  identifier: test_CDS78456
+  template:
+    templateRef: testTemp_CDS78487
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: test5
+            type: CI
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: Run_1
+                      type: Run
+                      description: <+input>
+  tags: {}
+  projectIdentifier: Fardeen
+  orgIdentifier: default
