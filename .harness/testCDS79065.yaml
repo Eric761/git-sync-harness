@@ -22,20 +22,11 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: HarnessApproval
-                  name: HarnessApproval_1
-                  identifier: HarnessApproval_1
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
                   spec:
-                    approvalMessage: Please review the following information and approve the pipeline progression
-                    includePipelineExecutionHistory: true
-                    isAutoRejectEnabled: false
-                    approvers:
-                      userGroups:
-                        - account._account_all_users
-                      minimumCount: 1
-                      disallowPipelineExecutor: false
-                    approverInputs: []
-                  timeout: 1d
+                    duration: 10m
             rollbackSteps: []
         tags: {}
         failureStrategies:
@@ -44,3 +35,29 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+    - stage:
+        name: approvalStg
+        identifier: approvalStg
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: approvalStep
+                  identifier: approvalStep
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account._account_all_users
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
