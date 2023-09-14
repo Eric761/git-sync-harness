@@ -1,0 +1,47 @@
+pipeline:
+  name: testCDS-79260Pip
+  identifier: testCDS79260Pip
+  template:
+    templateRef: development_pipeline
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: deployTemp
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+        - stage:
+            identifier: approvalTemp
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: Send_Slack_Notification
+                          type: ShellScript
+                          spec:
+                            environmentVariables:
+                              - name: channel
+                                type: String
+                                value: <+input>
+                      - step:
+                          identifier: Approval_Step
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups:
+                                - account._account_all_users
+                variables:
+                  - name: skip_approval
+                    type: String
+                    value: <+input>.default(false).allowedValues(true,false)
+  tags: {}
+  projectIdentifier: Fardeen
+  orgIdentifier: default
