@@ -24,14 +24,6 @@ pipeline:
                   execution:
                     steps:
                       - step:
-                          identifier: Send_Slack_Notification
-                          type: ShellScript
-                          spec:
-                            environmentVariables:
-                              - name: channel
-                                type: String
-                                value: <+input>
-                      - step:
                           identifier: Approval_Step
                           type: HarnessApproval
                           spec:
