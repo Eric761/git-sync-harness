@@ -1,0 +1,131 @@
+template:
+  name: Harness Stage Approval with Slack notification
+  identifier: Harness_Stage_Approval_with_Slack_notification
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: Send Slack Notification
+              identifier: Send_Slack_Notification
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |-
+                      #!/bin/bash
+
+                      # Convert timestamp to local date and time
+                      startedAt="$(TZ=Asia/Kolkata date -d @$(($startedAtEpoch/1000)) +'%Y-%m-%d %I:%M %p %Z')"
+
+                      # Construct the JSON message with variables
+                      message='[
+                          {
+                            "type": "section",
+                            "text": {
+                              "type": "mrkdwn",
+                              "text": "*Approval Required for pipeline <$pipelineExecutionLink|$pipelineName> triggered by $triggeredBy*\n\n*Approval message:*\n$approvalMessage"
+                            },
+                            "fields": [
+                              {"type": "mrkdwn", "text": "*Organization:*\n$orgName"},
+                              {"type": "mrkdwn", "text": "*Project:*\n$projectName"},
+                              {"type": "mrkdwn", "text": "*Triggered by:*\n$triggeredBy"}
+                            ]
+                          },
+                          {"type": "divider"},
+                          {
+                            "type": "section",
+                            "text": {
+                              "type": "mrkdwn",
+                              "text": "_Pipeline started on $startedAt_"
+                            }
+                          }
+                        ]'
+
+                      # Perform variable substitution in the message template
+                      message="${message//\$pipelineExecutionLink/$pipelineExecutionLink}"
+                      message="${message//\$pipelineName/$pipelineName}"
+                      message="${message//\$triggeredBy/$triggeredBy}"
+                      message="${message//\$approvalMessage/$approvalMessage}"
+                      message="${message//\$orgName/$orgName}"
+                      message="${message//\$projectName/$projectName}"
+                      message="${message//\$startedAt/$startedAt}"
+
+                      echo "$message"
+
+
+                      # Construct the curl command
+                      curlCommand="curl -X POST -H 'Content-type: application/json' -H 'Authorization: Bearer $SLACK_API_TOKEN' -d '{\"channel\":\"$channel\",\"blocks\":$message}' 'https://slack.com/api/chat.postMessage'"
+
+                      # Execute the curl command
+                      eval "$curlCommand"
+
+
+                      # Send the message to Slack using the Slack API
+                environmentVariables:
+                  - name: pipelineExecutionLink
+                    type: String
+                    value: <+pipeline.execution.url>
+                  - name: pipelineName
+                    type: String
+                    value: <+pipeline.name>
+                  - name: triggeredBy
+                    type: String
+                    value: <+pipeline.triggeredBy.name>
+                  - name: approvalMessage
+                    type: String
+                    value: Please review and approve
+                  - name: orgName
+                    type: String
+                    value: <+org.name>
+                  - name: projectName
+                    type: String
+                    value: <+project.name>
+                  - name: startedAtEpoch
+                    type: String
+                    value: <+pipeline.startTs>
+                  - name: SLACK_API_TOKEN
+                    type: String
+                    value: <+secrets.getValue("account.StockX_Harness_Notifications_Slack_OAuth_Token")>
+                  - name: channel
+                    type: String
+                    value: <+input>
+                outputVariables: []
+              timeout: 10m
+              when:
+                stageStatus: Success
+                condition: <+stage.variables.skip_approval> != true
+          - step:
+              name: Approval Step
+              identifier: Approval_Step
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: Please review the proposed deployment and approve, if desired
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                approverInputs: []
+                isAutoRejectEnabled: true
+              when:
+                stageStatus: Success
+                condition: <+stage.variables.skip_approval> != true
+    when:
+      pipelineStatus: Success
+    variables:
+      - name: skip_approval
+        type: String
+        description: ""
+        required: false
+        value: <+input>.default(false).allowedValues(true,false)
