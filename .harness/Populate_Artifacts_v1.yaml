@@ -1,0 +1,48 @@
+template:
+  name: Populate Artifacts
+  identifier: Populate_Artifacts
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: parse build number
+              identifier: parse_build_number
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      export buildno=<+<+artifact.tag.split('-')>[<+artifact.tag.split('-').size()-1>]>
+                environmentVariables: []
+                outputVariables:
+                  - name: buildno
+                    type: String
+                    value: buildno
+              timeout: 10m
+        rollbackSteps: []
+      gitOpsEnabled: false
+      service:
+        serviceRef: <+input>
+        serviceInputs: <+input>
+      environment:
+        environmentRef: fktest8
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra1
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
