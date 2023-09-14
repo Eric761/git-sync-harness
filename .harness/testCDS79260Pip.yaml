@@ -13,20 +13,8 @@ pipeline:
                 type: Deployment
                 spec:
                   service:
-                    serviceRef: dockerSrvc
-                    serviceInputs:
-                      serviceDefinition:
-                        type: Kubernetes
-                        spec:
-                          artifacts:
-                            primary:
-                              primaryArtifactRef: dockerArtifact
-                              sources:
-                                - identifier: dockerArtifact
-                                  type: DockerRegistry
-                                  spec:
-                                    tag: <+input>.regex(.*-([a-f0-9]{40}))
-                                    digest: <+input>
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
         - stage:
             identifier: approvalTemp
             template:
