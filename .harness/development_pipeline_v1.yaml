@@ -38,7 +38,7 @@ template:
                           environmentVariables:
                             - name: channel
                               type: String
-                              value: <+input>
+                              value: <+pipeline.variables.slack_channel>
                     - step:
                         identifier: Approval_Step
                         type: HarnessApproval
