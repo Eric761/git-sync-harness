@@ -1,0 +1,51 @@
+template:
+  name: development pipeline
+  identifier: development_pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: deployTemp
+          identifier: deployTemp
+          template:
+            templateRef: Populate_Artifacts
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+      - stage:
+          name: approvalTemp
+          identifier: approvalTemp
+          template:
+            templateRef: Harness_Stage_Approval_with_Slack_notification
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: Send_Slack_Notification
+                        type: ShellScript
+                        spec:
+                          environmentVariables:
+                            - name: channel
+                              type: String
+                              value: <+input>
+                    - step:
+                        identifier: Approval_Step
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+              variables:
+                - name: skip_approval
+                  type: String
+                  value: <+input>.default(false).allowedValues(true,false)
