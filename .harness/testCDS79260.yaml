@@ -1,0 +1,30 @@
+pipeline:
+  name: testCDS-79260
+  identifier: testCDS79260
+  template:
+    templateRef: testCDS79260PipTemp
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: approvalStg
+            template:
+              templateInputs:
+                type: Approval
+                variables:
+                  - name: skip_approval
+                    type: String
+                    value: <+input>.default(false).allowedValues(true,false)
+        - stage:
+            identifier: stg
+            template:
+              templateInputs:
+                type: Custom
+                variables:
+                  - name: stgVar
+                    type: String
+                    default: "false"
+                    value: <+input>.default(false).allowedValues(true,false)
+  tags: {}
+  projectIdentifier: Fardeen
+  orgIdentifier: default
