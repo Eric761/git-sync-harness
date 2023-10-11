@@ -1,0 +1,19 @@
+template:
+  name: delTemp2
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_remStep
+              identifier: Wait_1
+              spec:
+                duration: <+input>
+  identifier: delTemp2
+  versionLabel: v1
