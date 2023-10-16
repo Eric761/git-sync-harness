@@ -28,6 +28,8 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+        when:
+          pipelineStatus: Success
     - stage:
         name: stg2
         identifier: stg2
