@@ -39,3 +39,12 @@ pipeline:
           project: sunnyQA_test
           outputs: []
         tags: {}
+    - stage:
+        name: stg3
+        identifier: stg3
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: testRemPipeline123
+          project: sunnyQA_test
