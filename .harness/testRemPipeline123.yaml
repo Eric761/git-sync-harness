@@ -31,7 +31,8 @@ pipeline:
                     stageStatus: Failure
         tags: {}
         when:
-          pipelineStatus: Failure
+          pipelineStatus: Success
+          condition: ee
     - stage:
         name: stg2
         identifier: stg2
