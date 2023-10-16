@@ -28,3 +28,14 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: stg2
+        identifier: stg2
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: testRemPipeline123
+          project: sunnyQA_test
+          outputs: []
+        tags: {}
