@@ -27,9 +27,11 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+                  when:
+                    stageStatus: Failure
         tags: {}
         when:
-          pipelineStatus: Success
+          pipelineStatus: Failure
     - stage:
         name: stg2
         identifier: stg2
