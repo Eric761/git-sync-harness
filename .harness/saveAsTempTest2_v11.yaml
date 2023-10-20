@@ -1,0 +1,25 @@
+template:
+  name: saveAsTempTest2
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_RemTest2
+              identifier: Wait_1
+              spec:
+                duration: 5m
+    variables:
+      - name: stgVar
+        type: String
+        description: ""
+        required: false
+        value: <+input>
+  identifier: saveAsTempTest2
+  versionLabel: v11
