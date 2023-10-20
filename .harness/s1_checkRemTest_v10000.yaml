@@ -1,0 +1,25 @@
+template:
+  name: s1_checkRemTest
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_RemTest
+              identifier: Wait_1
+              spec:
+                duration: 25m
+    variables:
+      - name: stgVar
+        type: String
+        description: ""
+        required: false
+        value: <+input>
+  identifier: s1_checkRemTest
+  versionLabel: v10000
