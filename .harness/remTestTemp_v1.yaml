@@ -1,0 +1,25 @@
+template:
+  name: remTestTemp
+  type: Stage
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_rem
+              identifier: Wait_1
+              spec:
+                duration: <+input>
+    variables:
+      - name: stgVar
+        type: String
+        default: "false"
+        description: ""
+        required: false
+        value: <+input>.default(false).allowedValues(true,false)
+  identifier: remTestTemp
+  versionLabel: v1
