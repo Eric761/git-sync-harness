@@ -1,0 +1,20 @@
+template:
+  name: stgTempDumyRem
+  identifier: stgTempDumyRem
+  type: Stage
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_1
+              identifier: Wait_1
+              spec:
+                duration: <+input>
+              when: <+input>
+  versionLabel: v2
