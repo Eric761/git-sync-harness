@@ -22,4 +22,4 @@ template:
         type: String
         description: ""
         required: false
-        value: "56"
+        value: 56
