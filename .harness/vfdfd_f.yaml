@@ -1,0 +1,25 @@
+template:
+  name: vfdfd
+  identifier: vfdfd
+  versionLabel: f
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_1
+              identifier: Wait_1
+              spec:
+                duration: 10m
+    variables:
+      - name: dasds
+        type: String
+        description: ""
+        required: false
+        value: "56"
