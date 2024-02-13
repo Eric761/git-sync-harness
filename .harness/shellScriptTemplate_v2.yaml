@@ -1,0 +1,24 @@
+template:
+  name: shellScriptTemplate
+  identifier: shellScriptTemplate
+  type: Step
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags:
+    test1: ""
+  spec:
+    timeout: 12m
+    type: ShellScript
+    tags:
+      test1: ""
+    spec:
+      shell: Bash
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
+      outputVariables: []
+      executionTarget: {}
+  versionLabel: v2
