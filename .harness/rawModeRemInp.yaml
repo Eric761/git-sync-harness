@@ -21,7 +21,7 @@ inputSet:
                         type: Inline
                         spec:
                           script: <+input>
-                    timeout: ""
+                    timeout: <+input>
           variables:
             - name: stgVar
               type: String
