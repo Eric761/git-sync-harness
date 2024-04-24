@@ -1,5 +1,6 @@
 inputSet:
   name: rawModeRemInp
+  tags: {}
   identifier: rawModeRemInp
   orgIdentifier: default
   projectIdentifier: Fardeen
