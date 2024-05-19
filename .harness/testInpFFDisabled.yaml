@@ -20,7 +20,7 @@ inputSet:
                       environmentVariables:
                         - name: inpVar
                           type: String
-                          value: <+input>
+                          value: ""
           variables:
             - name: stgVar
               type: String
