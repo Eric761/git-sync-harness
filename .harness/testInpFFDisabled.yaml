@@ -1,0 +1,41 @@
+inputSet:
+  name: testInp-FFDisabled
+  identifier: testInpFFDisabled
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipeline:
+    identifier: testRawMode_RemotePip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: <+input>
+          variables:
+            - name: stgVar
+              type: String
+              value: abc
+      - stage:
+          identifier: stg2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: <+input>
+    variables:
+      - name: pipVar
+        type: String
+        value: <+input>
