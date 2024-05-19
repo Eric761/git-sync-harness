@@ -23,8 +23,11 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: <+input>
-                    environmentVariables: []
+                        script: exit 0
+                    environmentVariables:
+                      - name: inpVar
+                        type: String
+                        value: <+input>
                     outputVariables: []
                   timeout: 12m
         tags: {}
