@@ -17,10 +17,10 @@ inputSet:
                     identifier: ShellScript_1
                     type: ShellScript
                     spec:
-                      source:
-                        type: Inline
-                        spec:
-                          script: ""
+                      environmentVariables:
+                        - name: inpVar
+                          type: String
+                          value: <+input>
           variables:
             - name: stgVar
               type: String
