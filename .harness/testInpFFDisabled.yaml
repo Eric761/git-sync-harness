@@ -1,5 +1,6 @@
 inputSet:
   name: testInp-FFDisabled
+  tags: {}
   identifier: testInpFFDisabled
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -19,7 +20,7 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: <+input>
+                          script: ""
           variables:
             - name: stgVar
               type: String
@@ -34,8 +35,8 @@ inputSet:
                     identifier: Wait_1
                     type: Wait
                     spec:
-                      duration: <+input>
+                      duration: ""
     variables:
       - name: pipVar
         type: String
-        value: <+input>
+        value: ""
