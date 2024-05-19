@@ -1,5 +1,6 @@
 inputSet:
   name: remInp-RawModeON
+  tags: {}
   identifier: remInpRawModeON
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -16,10 +17,10 @@ inputSet:
                     identifier: ShellScript_1
                     type: ShellScript
                     spec:
-                      source:
-                        type: Inline
-                        spec:
-                          script: ""
+                      environmentVariables:
+                        - name: inpVar
+                          type: String
+                          value: ""
           variables:
             - name: stgVar
               type: String
