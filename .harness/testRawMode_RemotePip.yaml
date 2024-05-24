@@ -34,6 +34,9 @@ pipeline:
             description: ""
             required: true
             value: <+input>
+        strategy: <+input>
+        failureStrategies: <+input>
+        when: <+input>
   variables:
     - name: pipVar
       type: String
