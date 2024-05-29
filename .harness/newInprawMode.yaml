@@ -1,0 +1,31 @@
+inputSet:
+  name: newInp-rawMode
+  identifier: newInprawMode
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipeline:
+    identifier: testRawMode_RemotePip
+    stages:
+      - stage:
+          identifier: stg
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: ""
+                    timeout: ""
+          variables:
+            - name: stgVar
+              type: String
+              value: ""
+    variables:
+      - name: pipVar
+        type: String
+        value: ""
