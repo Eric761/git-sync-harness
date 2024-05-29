@@ -1,5 +1,6 @@
 inputSet:
   name: newInp-rawMode
+  tags: {}
   identifier: newInprawMode
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -19,13 +20,13 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: ""
-                    timeout: ""
+                          script: <+input>
+                    timeout: <+input>
           variables:
             - name: stgVar
               type: String
-              value: ""
+              value: <+input>
     variables:
       - name: pipVar
         type: String
-        value: ""
+        value: <+input>
