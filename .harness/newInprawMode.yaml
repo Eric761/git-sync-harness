@@ -20,13 +20,13 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: <+input>
-                    timeout: <+input>
+                          script: ""
+                    timeout: ""
           variables:
             - name: stgVar
               type: String
-              value: <+input>
+              value: ""
     variables:
       - name: pipVar
         type: String
-        value: <+input>
+        value: ""
