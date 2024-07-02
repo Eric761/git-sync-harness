@@ -1,0 +1,37 @@
+---
+pipeline:
+  projectIdentifier: "Fardeen"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "stg"
+      identifier: "stg"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "Wait"
+              name: "Wait_1"
+              identifier: "Wait_1"
+              spec:
+                duration: "<+input>.allowedValues(10m,20m)"
+      tags: {}
+      variables:
+      - name: "stgVar"
+        type: "String"
+        description: ""
+        required: false
+        value: "<+input>"
+      strategy:
+        parallelism: 3
+  variables:
+  - name: "pipVar"
+    type: "String"
+    description: ""
+    required: false
+    value: "<+input>"
+  identifier: "testRawModePip_Clone"
+  name: "testRawModePip - Clone"
