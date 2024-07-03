@@ -1,0 +1,47 @@
+---
+pipeline:
+  projectIdentifier: "Fardeen"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "stg"
+      identifier: "stg"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                onDelegate: true
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "<+input>"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+              when:
+                stageStatus: "Failure"
+      tags: {}
+      when:
+        pipelineStatus: "Success"
+        condition: "ee"
+  - stage:
+      name: "stg2"
+      identifier: "stg2"
+      description: ""
+      type: "Pipeline"
+      spec:
+        org: "default"
+        pipeline: "testRemPipeline123"
+        project: "sunnyQA_test"
+        outputs: []
+      tags: {}
+  identifier: "testRemPipeline123_Clone2"
+  name: "testRemPipeline123 - Clone2"
