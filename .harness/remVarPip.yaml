@@ -19,14 +19,14 @@ pipeline:
                   identifier: ShellScript_1
                   spec:
                     shell: Bash
-                    onDelegate: true
                     source:
                       type: Inline
                       spec:
                         script: <+input>
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
+                    executionTarget: {}
+                  timeout: 12m
         tags: {}
         variables:
           - name: var1
