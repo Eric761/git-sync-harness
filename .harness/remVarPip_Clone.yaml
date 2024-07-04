@@ -1,0 +1,37 @@
+---
+pipeline:
+  projectIdentifier: "Fardeen"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "stg"
+      identifier: "stg"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                onDelegate: true
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "<+input>"
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+      tags: {}
+      variables:
+      - name: "var1"
+        type: "String"
+        description: ""
+        required: false
+        value: "2099-12-08"
+  identifier: "remVarPip_Clone"
+  name: "remVarPip - Clone"
