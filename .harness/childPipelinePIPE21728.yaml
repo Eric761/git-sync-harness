@@ -49,5 +49,3 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
-  projectIdentifier: naidusanity
-  orgIdentifier: default
