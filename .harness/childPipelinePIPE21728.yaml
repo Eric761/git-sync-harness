@@ -1,0 +1,53 @@
+pipeline:
+  name: childPipeline-PIPE-21728
+  identifier: childPipelinePIPE21728
+  tags: {}
+  stages:
+    - stage:
+        name: stg1
+        identifier: stg1
+        description: desc
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: servicewithmanifest
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
+          environment:
+            environmentRef: QA_Target
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: infra_1
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
+  projectIdentifier: naidusanity
+  orgIdentifier: default
