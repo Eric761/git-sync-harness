@@ -1,0 +1,12 @@
+template:
+  name: dind-check-step-template
+  identifier: dindchecksteptemplate
+  versionLabel: v123
+  type: Step
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: K8sDryRun
+    timeout: 10m
+    spec: {}
