@@ -1,5 +1,6 @@
 inputSet:
   name: i2
+  tags: {}
   identifier: i2
   orgIdentifier: default
   projectIdentifier: Fardeen
@@ -15,4 +16,4 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: <+input>
+                    timeout: 9m
