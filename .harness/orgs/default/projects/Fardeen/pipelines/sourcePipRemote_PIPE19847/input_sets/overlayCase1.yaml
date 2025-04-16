@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: overlayCase1
+  identifier: overlayCase1
+  orgIdentifier: default
+  projectIdentifier: Fardeen
+  pipelineIdentifier: sourcePipRemote_PIPE19847
+  inputSetReferences:
+    - i1
+  tags: {}
