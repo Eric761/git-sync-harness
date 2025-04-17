@@ -1,0 +1,19 @@
+inputSet:
+  pipeline:
+    identifier: sourcePipRemote_PIPE19847
+    stages:
+      - stage:
+          identifier: stg2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 10m
+  name: inp3
+  identifier: inp3
+  orgIdentifier: default
+  projectIdentifier: Fardeen
