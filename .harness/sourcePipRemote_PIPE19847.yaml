@@ -58,4 +58,43 @@ pipeline:
                   spec:
                     duration: <+input>
         tags: {}
+    - stage:
+        name: stgTemp
+        identifier: stgTemp
+        tags: {}
+        template:
+          templateRef: deployStgTempInsert
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              execution:
+                steps:
+                  - insert:
+                      identifier: ins1
+                      steps: <+input>
+                  - stepGroup:
+                      identifier: stpGrpContainerized
+                      steps:
+                        - step:
+                            identifier: Run_1
+                            type: Run
+                            spec:
+                              registryRef: <+input>
+                              image: <+input>
+                        - insert:
+                            identifier: insertUnderContainerizedTemp
+                            steps: <+input>
+                rollbackSteps:
+                  - insert:
+                      identifier: insrollback
+                      steps: <+input>
   allowStageExecutions: true
