@@ -97,4 +97,8 @@ pipeline:
                   - insert:
                       identifier: insrollback
                       steps: <+input>
+            variables:
+              - name: er
+                type: String
+                value: <+input>.selectOneFrom(kkk,kkkk)
   allowStageExecutions: true
