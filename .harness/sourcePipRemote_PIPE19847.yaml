@@ -100,5 +100,5 @@ pipeline:
             variables:
               - name: er
                 type: String
-                value: <+input>.allowedValues(abc,def)
+                value: <+input>.selectOneFrom(abc,def)
   allowStageExecutions: true
