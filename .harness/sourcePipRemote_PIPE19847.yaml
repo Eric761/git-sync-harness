@@ -14,19 +14,11 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
                   spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: exit 0
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: <+input>
+                    duration: 10m
         tags: {}
     - stage:
         name: stg2
