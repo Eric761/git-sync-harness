@@ -1,0 +1,12 @@
+template:
+  name: longTempabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghij
+  identifier: longTempabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghijabcdeefghij
+  type: Step
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Wait
+    spec:
+      duration: 12m
+  versionLabel: vesion2Lvesion2Lvesion2Lvesion2Lvesionferffref
