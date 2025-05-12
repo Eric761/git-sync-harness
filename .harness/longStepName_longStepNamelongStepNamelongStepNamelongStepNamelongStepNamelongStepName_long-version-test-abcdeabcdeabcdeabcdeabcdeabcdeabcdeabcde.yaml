@@ -1,0 +1,21 @@
+template:
+  name: longStepName_longStepNamelongStepNamelongStepNamelongStepNamelongStepNamelongStepName
+  identifier: longStepName_longStepNamelongStepNamelongStepNamelongStepNamelongStepNamelongStepName
+  type: Step
+  projectIdentifier: Fardeen
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
+      outputVariables: []
+  versionLabel: long-version-test-abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde
