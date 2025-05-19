@@ -91,7 +91,7 @@ pipeline:
                               registryRef: <+input>
                               image: <+input>
                         - insert:
-                            identifier: insertUnderContainerizedTemp
+                            identifier: insertUnderStpGrp
                             steps: <+input>
                 rollbackSteps:
                   - insert:
